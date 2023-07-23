@@ -1,15 +1,8 @@
-name: 'Hello World Docker Action'
-description: 'Say hello to a user or the world.'
-inputs:
-  who-to-greet:
-    description: 'Who to greet'
-    required: true
-    default: 'world'
-outputs:
-  time:
-    description: 'The time we said hello.'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.who-to-greet }}
+# Container image that runs your code
+FROM alpine:3.10
+
+# Copies your code file from your action repository to the filesystem path `/` of the container
+COPY entrypoint.sh /entrypoint.sh
+
+# Code file to execute when the docker container starts up (`entrypoint.sh`)
+ENTRYPOINT ["/entrypoint.sh"]

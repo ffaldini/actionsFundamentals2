@@ -18,6 +18,3 @@ jobs:
         run: |
           echo "O repositório ${{ github.repository }} contém os seguintes arquivos:
           tree
-  
-  
-      

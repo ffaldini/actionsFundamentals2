@@ -12,14 +12,14 @@ jobs:
       name: Build
       runs-on: ubuntu-latest
       steps:
-       - run: |
+       - run:|
            echo "O job foi lançado pelo evento: ${{ github.event._name }}"
            echo "O nome do branch :${{ github.ref }} e o repo é ."
        - uses: actions/checkout@v3.3.0
        - name: List files in the repository
-       - run: |
-           echo "O repositório ${{ github.repository }} contém os seguintes arquivos:
-           tree
+           run:|
+            echo "O repositório ${{ github.repository }} contém os seguintes arquivos:
+            tree
   
   
       

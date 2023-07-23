@@ -1,8 +1,7 @@
 name: Github Actions Demo
 on:  
   push:
-    branches:
-      - main
+    branches: [ main ]
     paths-ignore: [.github/**]
   schedule:
     - cron: '15 6 * * 1'

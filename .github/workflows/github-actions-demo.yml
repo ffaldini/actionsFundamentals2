@@ -3,8 +3,7 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
-      - .github/**
+    paths-ignore: [.github/**]
   schedule:
     - cron: '15 6 * * 1'
   workflow_dispatch:
